@@ -4,6 +4,6 @@ unittestMock1,Utils,Mailer,23,0,0,0,6,0,2,0,2,0
 unittestMock1,exercise,LoginStatus,9,39,0,0,0,4,2,2,2,2
 unittestMock1,exercise,FailedLogin,0,41,0,2,0,10,0,3,0,2
 unittestMock1,exercise,Authenticator,40,71,0,8,6,19,1,6,1,2
-unittestMock1,exercise.realdatabase,SystemUser,33,0,0,0,14,0,8,0,8,0
-unittestMock1,exercise.realdatabase,UserFacadeRealDB,43,0,4,0,9,0,4,0,2,0
+unittestMock1,exercise.realdatabase,SystemUser,27,6,0,0,12,2,6,2,6,2
+unittestMock1,exercise.realdatabase,UserFacadeRealDB,5,38,0,4,0,9,0,4,0,2
 unittestMock1,exercise.realdatabase.db_original,SystemUser_,3,0,0,0,1,0,1,0,1,0

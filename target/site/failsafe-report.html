@@ -51,11 +51,11 @@
                           <a href="project-reports.html" title="Project Reports">Project Reports</a>
                     <ul>
                       <li class="none">
-                          <a href="failsafe-report.html" title="Failsafe Report">Failsafe Report</a>
-            </li>
-                      <li class="none">
-            <strong>Surefire Report</strong>
+            <strong>Failsafe Report</strong>
           </li>
+                      <li class="none">
+                          <a href="surefire-report.html" title="Surefire Report">Surefire Report</a>
+            </li>
                       <li class="none">
                           <a href="jacoco/index.html" title="JaCoCo Test">JaCoCo Test</a>
             </li>
@@ -105,12 +105,12 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td>10</td>
+<td>3</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.278</td></tr></table><br />
+<td>2.995</td></tr></table><br />
 <p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></div>
 <div class="section">
 <h2>Package List<a name="Package_List"></a></h2><a name="Package_List"></a>
@@ -126,12 +126,12 @@ function toggleDisplay(elementId) {
 <th>Time</th></tr>
 <tr class="b">
 <td><a href="#exercise">exercise</a></td>
-<td>10</td>
+<td>3</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.278</td></tr></table><br />
+<td>2.995</td></tr></table><br />
 <p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p>
 <div class="section">
 <h3>exercise<a name="exercise"></a></h3><a name="exercise"></a>
@@ -146,84 +146,32 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td><a href="#exerciseAuthenticatorTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
-<td><a href="#exerciseAuthenticatorTest">AuthenticatorTest</a></td>
-<td>5</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-<td>0.276</td></tr>
-<tr class="a">
-<td><a href="#exerciseFailedLoginTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
-<td><a href="#exerciseFailedLoginTest">FailedLoginTest</a></td>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-<td>0.001</td></tr>
-<tr class="b">
-<td><a href="#exerciseUserFacadeTest"><img src="images/icon_success_sml.gif" alt="" /></a></td>
-<td><a href="#exerciseUserFacadeTest">UserFacadeTest</a></td>
+<td><a href="#exerciseUserFacadeTestIT"><img src="images/icon_success_sml.gif" alt="" /></a></td>
+<td><a href="#exerciseUserFacadeTestIT">UserFacadeTestIT</a></td>
 <td>3</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>0.001</td></tr></table></div><br /></div>
+<td>2.995</td></tr></table></div><br /></div>
 <div class="section">
 <h2>Test Cases<a name="Test_Cases"></a></h2><a name="Test_Cases"></a>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p>
 <div class="section">
-<h3>AuthenticatorTest<a name="AuthenticatorTest"></a></h3><a name="exerciseAuthenticatorTest"></a>
+<h3>UserFacadeTestIT<a name="UserFacadeTestIT"></a></h3><a name="exerciseUserFacadeTestIT"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td><a name="TC_exercise.AuthenticatorTest.existingUserOK_PW"></a>existingUserOK_PW</td>
-<td>0.249</td></tr>
+<td><a name="TC_exercise.UserFacadeTestIT.authenticateOK"></a>authenticateOK</td>
+<td>2.981</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td><a name="TC_exercise.AuthenticatorTest.existingUserNOT_OK_PW"></a>existingUserNOT_OK_PW</td>
-<td>0</td></tr>
+<td><a name="TC_exercise.UserFacadeTestIT.authenticateNonExistingUser"></a>authenticateNonExistingUser</td>
+<td>0.006</td></tr>
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td><a name="TC_exercise.AuthenticatorTest.nonExistingUser"></a>nonExistingUser</td>
-<td>0</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td><a name="TC_exercise.AuthenticatorTest.existingUserThreeTries_Allowed_BecauseOfTimeBetweenTries"></a>existingUserThreeTries_Allowed_BecauseOfTimeBetweenTries</td>
-<td>0.024</td></tr>
-<tr class="a">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td><a name="TC_exercise.AuthenticatorTest.existingUserThreeTriesNotAllowed"></a>existingUserThreeTriesNotAllowed</td>
-<td>0.003</td></tr></table></div>
-<div class="section">
-<h3>FailedLoginTest<a name="FailedLoginTest"></a></h3><a name="exerciseFailedLoginTest"></a>
-<table border="1" class="bodyTable">
-<tr class="a">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td><a name="TC_exercise.FailedLoginTest.testIncrementFailedLoginsValidTimeBetweenTries"></a>testIncrementFailedLoginsValidTimeBetweenTries</td>
-<td>0</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td><a name="TC_exercise.FailedLoginTest.testIncrementFailedLoginsToShortTime"></a>testIncrementFailedLoginsToShortTime</td>
-<td>0</td></tr></table></div>
-<div class="section">
-<h3>UserFacadeTest<a name="UserFacadeTest"></a></h3><a name="exerciseUserFacadeTest"></a>
-<table border="1" class="bodyTable">
-<tr class="a">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td><a name="TC_exercise.UserFacadeTest.authenticateOK"></a>authenticateOK</td>
-<td>0</td></tr>
-<tr class="b">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td><a name="TC_exercise.UserFacadeTest.authenticateNonExistingUser"></a>authenticateNonExistingUser</td>
-<td>0</td></tr>
-<tr class="a">
-<td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td><a name="TC_exercise.UserFacadeTest.authenticateValidUserWrongPW"></a>authenticateValidUserWrongPW</td>
-<td>0</td></tr></table></div><br /></div>
+<td><a name="TC_exercise.UserFacadeTestIT.authenticateValidUserWrongPW"></a>authenticateValidUserWrongPW</td>
+<td>0.008</td></tr></table></div><br /></div>
       </div>
     </div>
     <div class="clear">

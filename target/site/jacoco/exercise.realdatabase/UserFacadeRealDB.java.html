@@ -11,21 +11,21 @@ public class UserFacadeRealDB implements IUserFacade {
 
   EntityManagerFactory emf;
   
-<span class="nc" id="L14">  public UserFacadeRealDB(String puName) {</span>
-<span class="nc" id="L15">    emf = Persistence.createEntityManagerFactory(puName);</span>
-<span class="nc" id="L16">  }</span>
+<span class="fc" id="L14">  public UserFacadeRealDB(String puName) {</span>
+<span class="fc" id="L15">    emf = Persistence.createEntityManagerFactory(puName);</span>
+<span class="fc" id="L16">  }</span>
   
   @Override
   public LoginStatus verifyUser(String userName, String pw) {
-<span class="nc" id="L20">    EntityManager em = emf.createEntityManager();</span>
+<span class="fc" id="L20">    EntityManager em = emf.createEntityManager();</span>
     try{
-<span class="nc" id="L22">      SystemUser user = em.find(SystemUser.class, userName);</span>
-<span class="nc bnc" id="L23" title="All 2 branches missed.">      if(user == null){</span>
-<span class="nc" id="L24">        return LoginStatus.UNKNOWN_USER;</span>
+<span class="fc" id="L22">      SystemUser user = em.find(SystemUser.class, userName);</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">      if(user == null){</span>
+<span class="fc" id="L24">        return LoginStatus.UNKNOWN_USER;</span>
       }
-<span class="nc bnc" id="L26" title="All 2 branches missed.">       return user.getPassword().equals(pw) ? LoginStatus.OK : LoginStatus.INVALID_PASSWORD;</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">       return user.getPassword().equals(pw) ? LoginStatus.OK : LoginStatus.INVALID_PASSWORD;</span>
     }finally{
-<span class="nc" id="L28">      em.close();</span>
+<span class="pc" id="L28">      em.close();</span>
     }
   }
   

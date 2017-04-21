@@ -1,4 +1,5 @@
 exercise\fakedatabase\UserFacadeFake.class
 exercise\UserFacadeTest.class
+exercise\UserFacadeTestIT.class
 exercise\AuthenticatorTest.class
 exercise\FailedLoginTest.class
