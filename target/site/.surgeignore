@@ -1,4 +1,0 @@
-# necessary to get resources for the Jacoco report
-!.sessions.html
-!.resources
-

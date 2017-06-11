@@ -6,4 +6,10 @@ cache:
     - node_modules
     - $HOME/.m2
 
-script: mvn verify
+script: mvn verify;
+
+    
+services:
+   - mysql
+before_install:
+  - mysql -e 'CREATE DATABASE usersDB;'

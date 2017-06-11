@@ -10,13 +10,7 @@ import org.junit.Before;
 
 public class UserFacadeTest {
 
-	IUserFacade facade;
-
-	// Override in a derived class to provide an alternative Facade for these
-	// tests
-	public IUserFacade makeUserFacade() {
-		return new UserFacadeFake();
-	}
+	private IUserFacade facade;
 
 	@Before
 	public void setup() {
@@ -25,31 +19,24 @@ public class UserFacadeTest {
 
 	@Test
 	public void authenticateOK() {
-		// Given (in setup)
-		// When
-		LoginStatus res = facade.verifyUser("Jan", "abcde");
-		// Then
+		LoginStatus res = facade.verifyUser("Hans", "abcde");
 		assertThat(res, is(LoginStatus.OK));
 	}
 
 	@Test
 	public void authenticateValidUserWrongPW() {
-		// Given (in setup)
-		// When
 		LoginStatus res = facade.verifyUser("Jan", "kfjdlsjaf");
-		// Then
 		assertThat(res, is(LoginStatus.INVALID_PASSWORD));
 	}
 
 	@Test
 	public void authenticateNonExistingUser() {
-		// Given (in setup)
-
-		// When
 		LoginStatus res = facade.verifyUser("xxxx", "kfjdlsjaf");
-
-		// Then
 		assertThat(res, is(LoginStatus.UNKNOWN_USER));
+	}
+
+	public IUserFacade makeUserFacade() {
+		return new UserFacadeFake();
 	}
 
 }
