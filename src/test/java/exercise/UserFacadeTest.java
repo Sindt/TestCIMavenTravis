@@ -19,7 +19,7 @@ public class UserFacadeTest {
 
 	@Test
 	public void authenticateOK() {
-		LoginStatus res = facade.verifyUser("Hans", "abcde");
+		LoginStatus res = facade.verifyUser("Jan", "abcde");
 		assertThat(res, is(LoginStatus.OK));
 	}
 
